@@ -1,14 +1,19 @@
 package com.parking.parkinglot.entities;
 
+
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "car")
+@Table(name = "cars")
 public class Car {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id" , nullable = false)
     private Long id;
-private String licensePlate;
-private String parkingSpot;
+
+    private String licensePlate;
+
+    private String parkingSpot;
 
     @ManyToOne
     @JoinColumn(name = "owner_id")
@@ -44,5 +49,9 @@ private String parkingSpot;
 
     public void setParkingSpot(String parkingSpot) {
         this.parkingSpot = parkingSpot;
+    }
+
+    public String getUsername() {
+        return owner.getUsername();
     }
 }

@@ -2,6 +2,9 @@ package com.parking.parkinglot;
 
 import java.io.*;
 
+import com.parking.parkinglot.entities.User;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
@@ -13,6 +16,7 @@ public class HelloServlet extends HttpServlet {
         message = "Hello World!";
     }
 
+
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
 
@@ -22,6 +26,9 @@ public class HelloServlet extends HttpServlet {
         out.println("<h1>" + message + "</h1>");
         out.println("<div style='border: 1px solid red;'>Laborator<div");
         out.println("</body></html>");
+
+
+
     }
 
     public void destroy() {
