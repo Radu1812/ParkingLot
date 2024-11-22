@@ -16,6 +16,8 @@ public class User {
     private String username;
     private String password;
     private String email;
+    private String name;
+
 
     public String getEmail() {
         return email;
@@ -59,4 +61,6 @@ public class User {
     public void setUsername(String username) {
         this.username = username;
     }
+
+
 }

@@ -23,7 +23,6 @@ tasks.withType(JavaCompile).configureEach {
 
 dependencies {
     compileOnly('jakarta.platform:jakarta.jakartaee-api:11.0.0-M3')
-
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
     compileOnly('jakarta.platform:jakarta.jakartaee-api:9.1.0')
