@@ -30,7 +30,7 @@ public class EditCar  extends HttpServlet {
         List<UserDto> users = userBean.findAllUsers();
         request.setAttribute("users", users);
 
-        Long carId = Long.parseLong(request.getParameter("Id"));
+        Long carId = Long.parseLong(request.getParameter("id"));
         CarDto car =carsBean.findById(carId);
         request.setAttribute("car", car);
         request.getRequestDispatcher("/WEB-INF/pages/editCar.jsp").forward(request,response);
@@ -44,6 +44,6 @@ public class EditCar  extends HttpServlet {
         Long carId = Long.parseLong(request.getParameter("carId"));
 
         carsBean.updateCar(carId,licensePlate,parkingSpot,userId);
-        response.sendRedirect(request.getContextPath()+"/Cars");
+        response.sendRedirect(request.getContextPath() + "/Cars");
     }
 }
